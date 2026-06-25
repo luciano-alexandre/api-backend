@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição em oficina</title>
+</head>
+
+<body>
+  <main>
+    <h1>Inscrição em oficina</h1>
+
+    <form id="form-inscricao">
+      <div>
+        <label for="nome">Nome</label>
+        <input id="nome" name="nome" type="text" required>
+      </div>
+
+      <div>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+
+      <div>
+        <label for="idade">Idade</label>
+        <input id="idade" name="idade" type="number" min="16" max="120" required>
+      </div>
+
+      <fieldset>
+        <legend>Interesses</legend>
+
+        <label>
+          <input name="interesses" type="checkbox" value="backend">
+        </label>
+        Backend
+
+        <label>
+          <input name="interesses" type="checkbox" value="docker">
+          Docker
+        </label>
+
+
+        <label>
+          <input name="interesses" type="checkbox" value="testes">
+          Testes
+        </label>
+      </fieldset>
+
+      <div>
+        <label for="comprovante">Comprovante</label>
+        <input id="comprovante" name="comprovante" type="file" accept="application/pdf,image/png,image/jpeg">
+      </div>
+      
+      <div>
+        <label for="observacoes">Observações</label>
+        <textarea id="observacoes" name="observacoes"></textarea>
+      </div>
+
+      <label>
+        Aceito os termos da oficina
+        <input id="aceitaTermos" name="aceitaTermos" type="checkbox" required>
+      </label>
+
+      <button type="submit">Enviar inscrição</button>
+    </form>
+
+    <pre id="resultado" aria-live="polite"></pre>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
